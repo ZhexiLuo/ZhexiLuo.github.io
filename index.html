@@ -37,7 +37,8 @@
                 <p style="text-align:center">
                   <a href="mailto:zhexiluo2026@outlook.com">Email</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/zhexi">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/ZhexiLuo">Github</a>
+                  <a href="https://github.com/ZhexiLuo">Github</a> &nbsp;/&nbsp;
+                  <a href="#" id="wechat-link">WeChat</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
@@ -114,30 +115,30 @@
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Project</h2>
-              </td>
-            </tr>
+      </td>
+    </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:42.5%;vertical-align:middle">
                 <img src="images/project1.png" alt="Smoke Removal Project" style="width:100%">
-              </td>
+      </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
                 <span class="papertitle">Smoke Removal in Laparoscopic Surgical Videos Using Temporal Smoke-Free Semantic Information</span>
-                <p></p>
-                <p>
+        <p></p>
+        <p>
                 Developed a novel framework that integrates video prediction and image desmoking to address surgical smoke in laparoscopic videos. By leveraging temporal semantic information from smoke-free frames within a Cycle-GAN based architecture, the framework achieves real-time smoke removal and demonstrates superior performance over existing approaches, improving surgical visibility and safety.
-                </p>
-              </td>
-            </tr>
+        </p>
+      </td>
+    </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
                 <td style="padding:16px;width:100%;vertical-align:middle">
                   <h2>Experience</h2>
-              </td>
-            </tr>
+      </td>
+    </tr>
             </tbody>
           </table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -165,7 +166,7 @@
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <ul>
-                  <li>First Prize in National Mathematical Contest in Modeling<span style="float:right;">2023</span></li>
+                  <li>First Prize in National Mathematical Contest in Modeling, 2023</li>
                 </ul>
               </td>
             </tr>
@@ -177,5 +178,31 @@
           <br>
           <br>
           </tbody></table>
+
+    <div id="wechat-popover" class="wechat-popover">
+      <img id="wechat-qr" src="images/wechat.jpg" alt="WeChat QR Code">
+    </div>
+
+    <script>
+      var popover = document.getElementById("wechat-popover");
+      var link = document.getElementById("wechat-link");
+
+      link.addEventListener('mouseover', function() {
+        popover.style.display = "block"; // Show it first to get dimensions
+        
+        var rect = link.getBoundingClientRect();
+        
+        var popoverWidth = popover.offsetWidth;
+        var popoverHeight = popover.offsetHeight;
+
+        popover.style.left = (rect.left + window.scrollX + (rect.width / 2) - (popoverWidth / 2)) + "px";
+        popover.style.top = (rect.top + window.scrollY - popoverHeight - 10) + "px"; // 10px above the link
+      });
+
+      link.addEventListener('mouseout', function() {
+        popover.style.display = "none";
+      });
+    </script>
+
   </body>
 </html>

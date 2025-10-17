@@ -144,3 +144,20 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* Popover styles */
+.wechat-popover {
+  display: none; /* Hidden by default */
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wechat-popover img {
+  display: block;
+  width: 150px;
+}
