@@ -1,3 +1,17 @@
+:root {
+  --page-bg: #fbfcf8;
+  --surface: #ffffff;
+  --text: #26343a;
+  --link: #24799c;
+  --link-hover: #a65a18;
+  --accent-surface: #f2a65a;
+  --heading: #245f63;
+  --control-bg: #f2f8fa;
+  --mint: #edf8f2;
+  --line: #dceae6;
+  --muted: #5e6b6f;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -64,14 +78,19 @@
 }
 
 a {
-  color: #1772d0;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: var(--link-hover);
   text-decoration: none;
+}
+
+body {
+  color: var(--text);
+  background: var(--page-bg);
 }
 
 body,
@@ -91,6 +110,9 @@ strong {
 
 h2 {
   margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  color: var(--heading);
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
@@ -125,6 +147,9 @@ h2 {
   justify-content: center;
   aspect-ratio: 1;
   overflow: hidden;
+  border-radius: 10px;
+  background: var(--page-bg);
+  box-shadow: 0 4px 18px rgba(38, 52, 58, 0.08);
 }
 
 #profile-photo {
@@ -143,10 +168,10 @@ h2 {
 
 .profile-carousel-button {
   padding: 4px 8px;
-  border: 1px solid #1772d0;
-  border-radius: 4px;
-  color: #1772d0;
-  background: white;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  color: var(--link);
+  background: var(--control-bg);
   font: inherit;
   font-size: 13px;
   cursor: pointer;
@@ -154,19 +179,19 @@ h2 {
 
 .profile-carousel-button:hover,
 .profile-carousel-button:focus {
-  border-color: #f09228;
-  color: black;
-  background: #f09228;
+  border-color: var(--accent-surface);
+  color: var(--text);
+  background: var(--accent-surface);
 }
 
 .profile-carousel-button:focus-visible {
-  outline: 2px solid #1772d0;
+  outline: 2px solid var(--link);
   outline-offset: 2px;
 }
 
 .profile-photo-counter {
   min-width: 32px;
-  color: #555;
+  color: var(--muted);
   font-size: 13px;
 }
 
@@ -176,9 +201,10 @@ h2 {
   width: 100%;
   padding: 0;
   border: 0;
+  border-radius: 8px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: white;
+  background: var(--surface);
   appearance: none;
   cursor: pointer;
 }
@@ -203,7 +229,7 @@ h2 {
 }
 
 .paper-highlight:focus-visible {
-  outline: 2px solid #1772d0;
+  outline: 2px solid var(--link);
   outline-offset: 2px;
 }
 
@@ -246,7 +272,11 @@ h2 {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background-color: var(--mint);
+}
+
+.featured-paper {
+  background-color: var(--mint);
 }
 
 .colored-box {
@@ -261,9 +291,9 @@ span.highlight {
   display: none; /* Hidden by default */
   position: absolute;
   z-index: 10;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 18px rgba(38, 52, 58, 0.14);
   padding: 10px;
   border-radius: 5px;
 }
