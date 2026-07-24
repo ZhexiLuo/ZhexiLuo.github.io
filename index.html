@@ -20,16 +20,22 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  👋 Zhexi Luo
+                  Zhexi Luo
                 </p>
                 <p class="intro-text">
-                  I am <strong>Zhexi Luo</strong>, an undergraduate in Computer Science at <strong>Sun Yat-sen University</strong>, where I conduct research at <a href="http://47.242.234.245:8889/#/home">ISEE@SYSU</a>. Currently, I am a research intern at LinS Lab, advised by <a href="https://linsats.github.io/">Lin Shao</a>.
+                  I am <strong>Zhexi Luo</strong>, an undergraduate in Computer Science at <strong>Sun Yat-sen University</strong>, where I conduct research at <a href="http://47.242.234.245:8889/#/home">ISEE@SYSU</a> under the supervision of <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a> and work with <a href="https://wyl2077.github.io/">Yi-Lin Wei</a>. Currently, I am a research intern at <a href="https://github.com/NUS-LinS-Lab">LinS Lab</a>, where I am advised by <a href="https://linsats.github.io/">Lin Shao</a> and work with <a href="https://ariszxxu.github.io/">Zhixuan Xu (Aris)</a>.
                 </p>
                 <p class="intro-text">
-                  My current research interests focus on dexterous grasping and dexterous manipulation, aiming to develop robust and reliable policies that endow robotic systems with human-like dexterity.
+                  My current research focuses on dexterous grasping and manipulation, aiming to achieve human-level dexterity.
                 </p>
                 <p class="intro-text">
-                  🎓 <strong>I am actively seeking PhD positions. For relevant opportunities or any thoughts related to my research, feel free to reach out!</strong>
+                  <strong>Recent research interests:</strong> Learning from human demonstrations and reinforcement learning.
+                </p>
+                <p class="intro-text">
+                  🏄 <strong>Hobbies:</strong> Surfing, hiking, badminton, skiing, backpacking, and spending time with my dog.
+                </p>
+                <p class="intro-text">
+                  🎓 <strong>I am actively seeking Fall 2027 PhD positions. For relevant opportunities or any thoughts related to my research, feel free to reach out!</strong>
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:zhexiluo2026@outlook.com">📧 Email</a> &nbsp;/&nbsp;
@@ -39,11 +45,16 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%;text-align:center;vertical-align:top;">
-                <a href="zhexi.jpg" style="display:inline-block;">
-                  <img id="profile-photo" style="width:80%;max-width:315px;object-fit: contain; border-radius: 0; transition: opacity 0.3s ease-in-out;" alt="profile photo" src="zhexi2.jpg" class="hoverZoomLink"
-                    onmouseover="this.src='zhexi.jpg'"
-                    onmouseout="this.src='zhexi2.jpg'">
-                </a>
+                <div class="profile-carousel">
+                  <div class="profile-photo-frame">
+                    <img id="profile-photo" src="zhexi2.jpg" alt="Portrait of Zhexi Luo">
+                  </div>
+                  <div class="profile-carousel-controls">
+                    <button id="profile-prev" class="profile-carousel-button" type="button" aria-label="Show previous profile photo" aria-controls="profile-photo">Prev</button>
+                    <span id="profile-photo-counter" class="profile-photo-counter" aria-live="polite">1 / 3</span>
+                    <button id="profile-next" class="profile-carousel-button" type="button" aria-label="Show next profile photo" aria-controls="profile-photo">Next</button>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody></table>
@@ -58,11 +69,13 @@
             <tr>
               <td style="padding:10px 20px;width:100%;vertical-align:middle">
                 <ul style="margin:0;padding-left:20px;">
-                  <li><strong>2026.4</strong> 🚀 OmniDexGrasp code released! <a href="https://github.com/ZhexiLuo/omni-dex-grasp">GitHub</a></li>
-                  <li><strong>2026.2</strong> 🎉 OmniDexGrasp accepted by ICRA 2026!</li>
-                  <li><strong>2026.2</strong> 🎉 DriftTrace accepted by IEEE T-IFS!</li>
+                  <li><strong>2026.7</strong> 🎉 <strong>One paper accepted to ECCV 2026 as an Oral!</strong></li>
+                  <li><strong>2026.6</strong> ✈️ Attended ICRA 2026 in Vienna, enjoying the beautiful scenery and meeting wonderful people!</li>
+                  <li><strong>2026.4</strong> 🚀 OmniDexGrasp code released! <a href="https://github.com/iSEE-Laboratory/OmniDexGrasp">GitHub</a></li>
+                  <li><strong>2026.2</strong> 🎉 <strong>OmniDexGrasp accepted by ICRA 2026!</strong></li>
+                  <li><strong>2026.2</strong> 🎉 <strong>DriftTrace accepted by IEEE T-IFS!</strong></li>
                   <li><strong>2026.1</strong> 🤝 Participated in the development of <a href="https://github.com/RoboVerseOrg/RoboVerse">RoboVerse V2</a></li>
-                  <li><strong>2025.11</strong> 🔬 Started research internship at LinS Lab@NUS, advised by <a href="https://linsats.github.io/">Lin Shao</a></li>
+                  <li><strong>2025.11</strong> 🔬 Started research internship at <a href="https://github.com/NUS-LinS-Lab">LinS Lab@NUS</a>, advised by <a href="https://linsats.github.io/">Lin Shao</a></li>
                   <li><strong>2025.10</strong> 🤖 Attended CoRL 2025, met many fascinating robots!</li>
                   <li><strong>2025.9</strong> 📝 Completed my first work in robotics! <a href="https://mp.weixin.qq.com/s/5ljehu_bbbJVMyuOvzWQxQ">Media coverage</a></li>
                   <li><strong>2025.4</strong> 🚀 Started my journey in robotics research</li>
@@ -107,31 +120,53 @@
         <br>
                 <a href="https://wyl2077.github.io/">Yi-Lin Wei</a>*, <strong>Zhexi Luo*</strong>, Yuhao Lin, <a href="https://frenkielm.github.io/">Mu Lin</a>, Zhizhao Liang, Shuoyu Chen, <a href="https://scholar.google.com/citations?user=AwqDDGoAAAAJ&hl=en">Wei-Shi Zheng</a>
                 <br>
-                <em>Accepted, IEEE International Conference on Robotics and Automation (ICRA)</em>, 2026
+                <strong><em>Accepted to ICRA 2026</em></strong>
                 <br>
-                <a href="https://arxiv.org/abs/2510.23119">arXiv</a> / <a href="https://isee-laboratory.github.io/OmniDexGrasp/">project page</a> / <a href="https://github.com/ZhexiLuo/omni-dex-grasp">code</a>
+                <a href="https://arxiv.org/abs/2510.23119">arXiv</a> / <a href="https://isee-laboratory.github.io/OmniDexGrasp/">project page</a> / <a href="https://github.com/iSEE-Laboratory/OmniDexGrasp">code</a>
         <p></p>
         <p>
                 A generalizable dexterous framework that leverages generative foundation models to achieve omni-capabilities across diverse user prompts, dexterous embodiments, and grasping tasks.
         </p>
       </td>
     </tr>
-            <tr bgcolor="#ffffd0">
+            <tr>
               <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <div style="position: relative;">
-                  <img src="images/HumanoidLocoManip_main.png" alt="Humanoid Loco-Manipulation" style="width:100%; display:block; transition: opacity 0.2s ease-in-out;"
-                    onmouseover="this.src='images/HumanoidLocoManip_grasp.png'"
-                    onmouseout="this.src='images/HumanoidLocoManip_main.png'">
-                </div>
+                <img src="images/axis-v1.png" alt="AXIS system overview" style="width:100%;display:block;">
+              </td>
+              <td style="padding:20px;width:57.5%;vertical-align:middle">
+                <a href="https://axisaiorg.github.io/AXIS-V1/">
+                  <span class="papertitle">AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation</span>
+                </a>
+                <br>
+                Mengfei Zhao*, Dihong Huang*, Yikai Tang*, Peihao Li*, Mingxuan Yan*, Ruiqi Zhuang*, Yanjia Huang*, Jie Wang, Hai Zhai, Tony Zhou, Rui Zhang, <strong>Zhexi Luo</strong>, Yuchen Huang, Jianfei Yang, Jiachen Li
+                <br>
+                <em>Under Review</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2607.21588">arXiv</a> / <a href="https://axisaiorg.github.io/AXIS-V1/">project page</a>
+                <p></p>
+                <p>
+                  A growable, community-driven data engine that turns browser-collected demonstrations into continually expanding training data for scalable robot manipulation.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px;width:42.5%;vertical-align:middle">
+                <button id="humanoid-highlight" class="paper-highlight" type="button" aria-label="Play Humanoid Loco-Manipulation video highlight">
+                  <img src="images/HumanoidLocoManip_main.png" alt="Humanoid Loco-Manipulation">
+                  <video id="humanoid-highlight-video" muted loop playsinline preload="metadata" poster="images/HumanoidLocoManip_main.png">
+                    <source src="images/humanoid-locomanip-highlight.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </button>
               </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
                 <span class="papertitle">Generalizable Humanoid Loco-Manipulation via Spatial Perception and Decision-Making of Multi-Agent Large Model</span>
                 <br>
                 Zhizhao Liang, Yi-Lin Wei, Xuhang Chen, Mu Lin, Yi-Xiang He, <strong>Zhexi Luo</strong>, Jun-Hui Liu, Kun-Yu Lin, Wei-Shi Zheng
                 <br>
-                <em>Under Review</em>, 2026
+                <strong><em>Accepted to ECCV 2026 (Oral)</em></strong>
                 <br>
-                <a href="#">arXiv</a> / <a href="#">project page</a> / <a href="#">code</a>
+                <a href="https://arxiv.org/abs/2605.21133">arXiv</a> / <a href="https://leungchaos.github.io/Humanoid-Whole-Body-Manipulation-via-Active-Spatial-Brain-and-Generalizable-Action-Cerebellum/#paper-home">project page</a>
         <p></p>
         <p>
                 A generalizable humanoid loco-manipulation framework that leverages multi-agent large models, combining an Active Spatial Brain for spatial perception and task planning with a Generalizable Action Cerebellum for executable action generation without task-specific real-robot data.
@@ -147,33 +182,12 @@
                 <br>
                 Yuedong Pan, Lixin Zhao, Tao Leng, <strong>Zhexi Luo</strong>, Lijun Cai, Aimin Yu, Dan Meng
                 <br>
-                <em>Accepted, IEEE Transactions on Information Forensics and Security (T-IFS)</em>, 2026
+                <strong><em>Accepted, IEEE Transactions on Information Forensics and Security (T-IFS)</em>, 2026</strong>
                 <br>
                 <a href="https://ieeexplore.ieee.org/document/11367729">IEEE Xplore</a>
         <p></p>
         <p>
                 A unified framework that combines detecting, explaining, and adapting to out-of-training-distribution (OOD) data for improving model robustness in dynamic open-world environments.
-        </p>
-      </td>
-    </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>🔬 Project</h2>
-      </td>
-    </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <img src="images/project1.png" alt="Smoke Removal Project" style="width:100%">
-      </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
-                <span class="papertitle">Smoke Removal in Laparoscopic Surgical Videos Using Temporal Smoke-Free Semantic Information</span>
-        <p></p>
-        <p>
-                Developed a novel framework that integrates video prediction and image desmoking to address surgical smoke in laparoscopic videos. By leveraging temporal semantic information from smoke-free frames within a Cycle-GAN based architecture, the framework achieves real-time smoke removal and demonstrates superior performance over existing approaches, improving surgical visibility and safety.
         </p>
       </td>
     </tr>
@@ -194,9 +208,9 @@
                   <img src="images/LinS_lab.jpeg" alt="LinS Lab" style="width:100%;border-radius:50%;object-fit:cover;">
               </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
-                  <p style="margin:0;"><strong>LinS Lab, National University of Singapore (NUS)</strong></p>
+                  <p style="margin:0;"><strong><a href="https://github.com/NUS-LinS-Lab">LinS Lab</a>, National University of Singapore (NUS)</strong></p>
                   <p style="margin:0;">Research Intern, advised by <a href="https://linsats.github.io/">Lin Shao</a></p>
-                  <p style="margin:0;">2025.11 - Present</p>
+                  <p style="margin:0;">2025.11 - 2026.9</p>
               </td>
             </tr>
               <tr>
@@ -214,22 +228,6 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>🏆 Awards</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <ul>
-                  <li>First Prize in National Mathematical Contest in Modeling, 2023</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>🧑‍🔬 Academic Service</h2>
               </td>
             </tr>
@@ -237,7 +235,7 @@
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <p style="margin:0;"><strong>Conference Reviewer:</strong> CVPR 2026, ICCV 2026, ECCV 2026</p>
+                <p style="margin:0;"><strong>Conference Reviewer:</strong> CVPR 2026, ICCV 2026, ECCV 2026, NeurIPS 2026</p>
               </td>
             </tr>
           </tbody></table>
@@ -247,13 +245,62 @@
           <br>
           <br>
           <br>
-          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
 
     <div id="wechat-popover" class="wechat-popover">
       <img id="wechat-qr" src="images/wechat.jpg" alt="WeChat QR Code">
     </div>
 
     <script>
+      const profilePhotos = [
+        { src: "zhexi2.jpg", alt: "Portrait of Zhexi Luo" },
+        { src: "zhexi.jpg", alt: "Zhexi Luo carrying a surfboard at the beach" },
+        { src: "images/profile-dog.webp", alt: "Illustration of Zhexi Luo sitting with a white dog" }
+      ];
+      const profilePhoto = document.getElementById("profile-photo");
+      const profilePhotoCounter = document.getElementById("profile-photo-counter");
+      let profilePhotoIndex = 0;
+
+      function showProfilePhoto(index) {
+        profilePhotoIndex = (index + profilePhotos.length) % profilePhotos.length;
+        profilePhoto.src = profilePhotos[profilePhotoIndex].src;
+        profilePhoto.alt = profilePhotos[profilePhotoIndex].alt;
+        profilePhotoCounter.textContent = `${profilePhotoIndex + 1} / ${profilePhotos.length}`;
+      }
+
+      showProfilePhoto(0);
+
+      document.getElementById("profile-prev").addEventListener("click", function() {
+        showProfilePhoto(profilePhotoIndex - 1);
+      });
+
+      document.getElementById("profile-next").addEventListener("click", function() {
+        showProfilePhoto(profilePhotoIndex + 1);
+      });
+
+      const humanoidHighlight = document.getElementById("humanoid-highlight");
+      const humanoidHighlightVideo = document.getElementById("humanoid-highlight-video");
+
+      function playHumanoidHighlight() {
+        humanoidHighlightVideo.play();
+        humanoidHighlight.classList.add("is-active");
+      }
+
+      function stopHumanoidHighlight() {
+        if (humanoidHighlight.matches(":hover") || document.activeElement === humanoidHighlight) {
+          return;
+        }
+        humanoidHighlight.classList.remove("is-active");
+        humanoidHighlightVideo.pause();
+      }
+
+      humanoidHighlight.addEventListener("mouseenter", playHumanoidHighlight);
+      humanoidHighlight.addEventListener("mouseleave", stopHumanoidHighlight);
+      humanoidHighlight.addEventListener("focus", playHumanoidHighlight);
+      humanoidHighlight.addEventListener("blur", stopHumanoidHighlight);
+
       var popover = document.getElementById("wechat-popover");
       var link = document.getElementById("wechat-link");
 
