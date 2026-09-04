@@ -90,27 +90,23 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr class="featured-paper" onmouseout="omnidexgrasp_stop()" onmouseover="omnidexgrasp_start()">
+            <tr class="featured-paper">
               <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <div style="position: relative;">
-                  <div id="omnidexgrasp_image" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; border-radius: 8px; transition: opacity 0.2s ease-in-out 0s; background-color: white;">
-                    <video style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.18);" muted autoplay loop playsinline disablepictureinpicture>
-                      <source src="images/OmniDexGrasp.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-                    </video>
-        </div>
-                  <img src="images/OmniDexGrasp.png" style="width: 100%;">
-        </div>
-        <script type="text/javascript">
-                  function omnidexgrasp_start() {
-                    document.getElementById('omnidexgrasp_image').style.opacity = "1";
-          }
-
-                  function omnidexgrasp_stop() {
-                    document.getElementById('omnidexgrasp_image').style.opacity = "0";
-          }
-                  omnidexgrasp_stop()
-        </script>
+                <button id="omnidexgrasp-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip OmniDexGrasp preview">
+                  <div class="paper-flip-inner">
+                    <div class="paper-flip-face paper-flip-front">
+                      <img src="images/OmniDexGrasp.png" alt="OmniDexGrasp system overview">
+                      <span class="paper-flip-hint" aria-hidden="true">↻ Flip</span>
+                    </div>
+                    <div class="paper-flip-face paper-flip-back">
+                      <video id="omnidexgrasp-demo-video" style="transform:scale(1.18)" muted loop playsinline disablepictureinpicture preload="metadata" aria-label="OmniDexGrasp demonstrations">
+                        <source src="images/OmniDexGrasp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <span class="paper-flip-hint" aria-hidden="true">↩ Flip back</span>
+                    </div>
+                  </div>
+                </button>
       </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
                 <a href="https://isee-laboratory.github.io/OmniDexGrasp/">
@@ -128,21 +124,23 @@
         </p>
       </td>
     </tr>
-            <tr class="paper-flip-row">
+            <tr>
               <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <div class="paper-flip">
+                <button id="tro-grasp-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip T(R,O) Grasp++ preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
                       <img src="images/tro-grasp-teaser.png" alt="T(R,O) Grasp++ benchmark, graph representation, and performance results">
+                      <span class="paper-flip-hint" aria-hidden="true">↻ Flip</span>
                     </div>
                     <div class="paper-flip-face paper-flip-back">
-                      <video muted autoplay loop playsinline disablepictureinpicture preload="metadata" aria-label="Inspire XHand and LEAP Hand real-world grasping demos">
+                      <video id="tro-grasp-demo-video" muted loop playsinline disablepictureinpicture preload="metadata" aria-label="Inspire XHand and LEAP Hand real-world grasping demos">
                         <source src="images/tro-grasp-demos.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
+                      <span class="paper-flip-hint" aria-hidden="true">↩ Flip back</span>
                     </div>
                   </div>
-                </div>
+                </button>
               </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
                 <a href="https://trograspplusplus.github.io/">
@@ -160,18 +158,20 @@
                 </p>
               </td>
             </tr>
-            <tr class="paper-flip-row">
+            <tr>
               <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <div class="paper-flip">
+                <button id="axis-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip AXIS preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
                       <img src="images/axis-v1.png" alt="AXIS system overview">
+                      <span class="paper-flip-hint" aria-hidden="true">↻ Flip</span>
                     </div>
                     <div class="paper-flip-face paper-flip-back">
                       <img src="https://axisaiorg.github.io/AXIS-V1/assets/generated/data_overview.png" alt="AXIS data overview" loading="lazy" decoding="async">
+                      <span class="paper-flip-hint" aria-hidden="true">↩ Flip back</span>
                     </div>
                   </div>
-                </div>
+                </button>
               </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
                 <a href="https://axisaiorg.github.io/AXIS-V1/">
@@ -191,12 +191,20 @@
             </tr>
             <tr>
               <td style="padding:16px;width:42.5%;vertical-align:middle">
-                <button id="humanoid-highlight" class="paper-highlight" type="button" aria-label="Play Humanoid Loco-Manipulation video highlight">
-                  <img src="images/HumanoidLocoManip_main.png" alt="Humanoid Loco-Manipulation">
-                  <video id="humanoid-highlight-video" muted loop playsinline disablepictureinpicture preload="metadata" poster="images/HumanoidLocoManip_main.png">
-                    <source src="images/humanoid-locomanip-highlight.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
+                <button id="humanoid-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip Humanoid Loco-Manipulation preview">
+                  <div class="paper-flip-inner">
+                    <div class="paper-flip-face paper-flip-front">
+                      <img src="images/HumanoidLocoManip_main.png" alt="Humanoid Loco-Manipulation">
+                      <span class="paper-flip-hint" aria-hidden="true">↻ Flip</span>
+                    </div>
+                    <div class="paper-flip-face paper-flip-back">
+                      <video id="humanoid-demo-video" muted loop playsinline disablepictureinpicture preload="metadata" poster="images/HumanoidLocoManip_main.png" aria-label="Humanoid Loco-Manipulation demonstrations">
+                        <source src="images/humanoid-locomanip-highlight.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <span class="paper-flip-hint" aria-hidden="true">↩ Flip back</span>
+                    </div>
+                  </div>
                 </button>
               </td>
               <td style="padding:20px;width:57.5%;vertical-align:middle">
@@ -312,6 +320,49 @@
 
       showProfilePhoto(0);
 
+      const omniDexGraspPaperFlip = document.getElementById("omnidexgrasp-paper-flip");
+      const omniDexGraspDemoVideo = document.getElementById("omnidexgrasp-demo-video");
+      const troGraspFlip = document.getElementById("tro-grasp-flip");
+      const troGraspDemoVideo = document.getElementById("tro-grasp-demo-video");
+      const axisPaperFlip = document.getElementById("axis-paper-flip");
+      const humanoidPaperFlip = document.getElementById("humanoid-paper-flip");
+      const humanoidDemoVideo = document.getElementById("humanoid-demo-video");
+
+      function togglePaperFlip(button, frontLabel, backLabel) {
+        const isFlipped = button.classList.toggle("is-flipped");
+        button.setAttribute("aria-label", isFlipped ? backLabel : frontLabel);
+        return isFlipped;
+      }
+
+      function togglePaperVideo(button, video, frontLabel, backLabel) {
+        const isFlipped = togglePaperFlip(button, frontLabel, backLabel);
+
+        if (isFlipped) {
+          video.currentTime = 0;
+          video.play();
+          return;
+        }
+
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      omniDexGraspPaperFlip.addEventListener("click", function() {
+        togglePaperVideo(omniDexGraspPaperFlip, omniDexGraspDemoVideo, "Flip OmniDexGrasp preview", "Flip back to OmniDexGrasp teaser");
+      });
+
+      troGraspFlip.addEventListener("click", function() {
+        togglePaperVideo(troGraspFlip, troGraspDemoVideo, "Flip T(R,O) Grasp++ preview", "Flip back to T(R,O) Grasp++ teaser");
+      });
+
+      axisPaperFlip.addEventListener("click", function() {
+        togglePaperFlip(axisPaperFlip, "Flip AXIS preview", "Flip back to AXIS overview");
+      });
+
+      humanoidPaperFlip.addEventListener("click", function() {
+        togglePaperVideo(humanoidPaperFlip, humanoidDemoVideo, "Flip Humanoid Loco-Manipulation preview", "Flip back to Humanoid Loco-Manipulation teaser");
+      });
+
       document.getElementById("profile-prev").addEventListener("click", function() {
         showProfilePhoto(profilePhotoIndex - 1);
       });
@@ -319,27 +370,6 @@
       document.getElementById("profile-next").addEventListener("click", function() {
         showProfilePhoto(profilePhotoIndex + 1);
       });
-
-      const humanoidHighlight = document.getElementById("humanoid-highlight");
-      const humanoidHighlightVideo = document.getElementById("humanoid-highlight-video");
-
-      function playHumanoidHighlight() {
-        humanoidHighlightVideo.play();
-        humanoidHighlight.classList.add("is-active");
-      }
-
-      function stopHumanoidHighlight() {
-        if (humanoidHighlight.matches(":hover") || document.activeElement === humanoidHighlight) {
-          return;
-        }
-        humanoidHighlight.classList.remove("is-active");
-        humanoidHighlightVideo.pause();
-      }
-
-      humanoidHighlight.addEventListener("mouseenter", playHumanoidHighlight);
-      humanoidHighlight.addEventListener("mouseleave", stopHumanoidHighlight);
-      humanoidHighlight.addEventListener("focus", playHumanoidHighlight);
-      humanoidHighlight.addEventListener("blur", stopHumanoidHighlight);
 
       var popover = document.getElementById("wechat-popover");
       var link = document.getElementById("wechat-link");
