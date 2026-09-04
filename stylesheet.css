@@ -233,13 +233,13 @@ h2 {
   outline-offset: 2px;
 }
 
-.axis-paper-flip {
+.paper-flip {
   width: 100%;
   aspect-ratio: 16 / 9;
   perspective: 1000px;
 }
 
-.axis-paper-flip-inner {
+.paper-flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -247,7 +247,7 @@ h2 {
   transform-style: preserve-3d;
 }
 
-.axis-paper-flip-face {
+.paper-flip-face {
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -256,29 +256,30 @@ h2 {
   backface-visibility: hidden;
 }
 
-.axis-paper-flip-face img {
+.paper-flip-face img,
+.paper-flip-face video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.axis-paper-flip-front {
+.paper-flip-front {
   transform: rotateY(0deg);
 }
 
-.axis-paper-flip-back {
+.paper-flip-back {
   transform: rotateY(180deg);
 }
 
-.axis-paper:hover .axis-paper-flip-inner,
-.axis-paper:focus-within .axis-paper-flip-inner {
+.paper-flip-row:hover .paper-flip-inner,
+.paper-flip-row:focus-within .paper-flip-inner {
   transform: rotateY(180deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .paper-highlight video,
-  .axis-paper-flip-inner {
+  .paper-flip-inner {
     transition: none;
   }
 }
