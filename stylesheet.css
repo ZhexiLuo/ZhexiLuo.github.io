@@ -233,8 +233,52 @@ h2 {
   outline-offset: 2px;
 }
 
+.axis-paper-flip {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  perspective: 1000px;
+}
+
+.axis-paper-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.axis-paper-flip-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface);
+  backface-visibility: hidden;
+}
+
+.axis-paper-flip-face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.axis-paper-flip-front {
+  transform: rotateY(0deg);
+}
+
+.axis-paper-flip-back {
+  transform: rotateY(180deg);
+}
+
+.axis-paper:hover .axis-paper-flip-inner,
+.axis-paper:focus-within .axis-paper-flip-inner {
+  transform: rotateY(180deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .paper-highlight video {
+  .paper-highlight video,
+  .axis-paper-flip-inner {
     transition: none;
   }
 }
