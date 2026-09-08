@@ -8,7 +8,7 @@ const restartButton = document.querySelector("#restart-button");
 const timeline = document.querySelector("#timeline");
 const speedSelect = document.querySelector("#playback-speed");
 const message = document.querySelector("#playback-message");
-const cameraLabels = { global: "全局视角", ego: "头部视角", gripper: "夹爪视角" };
+const cameraLabels = { global: "Global view", ego: "Ego view", gripper: "Gripper view" };
 let activeCamera = "global";
 let progress = 0;
 let playing = false;
@@ -30,9 +30,9 @@ function updateControls() {
   playButton.disabled = !ready;
   restartButton.disabled = !ready;
   timeline.disabled = !ready;
-  document.querySelector("#play-label").textContent = playing ? "暂停" : "播放";
+  document.querySelector("#play-label").textContent = playing ? "Pause" : "Play";
   document.querySelector("#play-icon").textContent = playing ? "Ⅱ" : "▶";
-  playButton.setAttribute("aria-label", playing ? "暂停两个视频" : "同步播放两个视频");
+  playButton.setAttribute("aria-label", playing ? "Pause both videos" : "Play both videos");
 }
 
 function updateReadouts() {
@@ -91,7 +91,7 @@ async function startPlayback() {
   } catch (error) {
     if (request !== playbackRequest) return;
     pausePlayback();
-    message.textContent = `视频播放未开始：${error.message}`;
+    message.textContent = `Playback could not start: ${error.message}`;
   }
 }
 
@@ -110,9 +110,9 @@ function selectCamera(camera) {
     button.setAttribute("aria-pressed", String(button.dataset.camera === camera));
   });
   document.querySelector("#camera-label").textContent = cameraLabels[camera];
-  simulationVideo.setAttribute("aria-label", `机器人仿真${cameraLabels[camera]}`);
+  simulationVideo.setAttribute("aria-label", `Robot simulation: ${cameraLabels[camera]}`);
   simulationVideo.closest(".video-stage").classList.remove("is-ready");
-  document.querySelector("#simulation-state > span:last-child").textContent = "正在载入此视角";
+  document.querySelector("#simulation-state > span:last-child").textContent = "Loading this camera view";
   simulationVideo.src = `media/${camera}.mp4`;
   simulationVideo.load();
   updateControls();
@@ -127,7 +127,7 @@ function connectVideo(video) {
   if (video.readyState >= 2) showVideo();
   video.addEventListener("error", () => {
     stage.classList.remove("is-ready");
-    stage.querySelector(".media-state > span:last-child").textContent = "此视频尚未就绪";
+    stage.querySelector(".media-state > span:last-child").textContent = "This video is unavailable";
     if (videos.includes(video)) {
       resumeAfterCameraChange = false;
       pausePlayback();
@@ -177,7 +177,7 @@ document.querySelector(".viewer").addEventListener("keydown", event => {
 async function loadMetrics() {
   const response = await fetch("media/metrics.json");
   if (response.status === 404) return;
-  if (!response.ok) throw new Error(`指标请求失败：HTTP ${response.status}`);
+  if (!response.ok) throw new Error(`Metrics request failed: HTTP ${response.status}`);
   const metrics = await response.json();
   const metricsLink = document.querySelector("#metrics-link");
   metricsLink.href = "media/metrics.json";
@@ -188,16 +188,16 @@ async function loadMetrics() {
   status.replaceChildren();
   const dot = document.createElement("i");
   dot.className = "status-dot orange";
-  status.append(dot, success ? "本次执行通过" : "本次执行未通过");
+  status.append(dot, success ? "Run verified" : "Run did not pass");
   document.querySelector("#result-description").textContent = success
-    ? "本次记录通过运行脚本的终态判定。下方保留对应收集数、时间与接触指标，可下载检查。"
-    : "本次记录未通过运行脚本的终态判定。保留实际结果，用于检查接触、轨迹与未收集方块。";
+    ? "This recorded run passed its independent audit. Inspect the collection count, contact measurements, and original logs below."
+    : "This run did not pass its audit. The actual measurements remain available for inspecting contact, motion, and uncollected blocks.";
   document.querySelector("#metric-collected").textContent = metrics.collected ?? "—";
   document.querySelector("#metric-total").textContent = metrics.total_blocks ?? "—";
   document.querySelector("#metric-duration").textContent = metrics.duration_s?.toFixed(1) ?? "—";
   document.querySelector("#metric-penetration").textContent = metrics.max_penetration_m == null ? "—" : (metrics.max_penetration_m * 1000).toFixed(2);
   document.querySelector("#metric-impulse").textContent = metrics.contact_impulse_ns?.toFixed(3) ?? "—";
-  document.querySelector("#run-id").textContent = metrics.run_id ?? "记录未提供运行编号";
+  document.querySelector("#run-id").textContent = metrics.run_id ?? "No run ID provided";
 }
 
 async function connectDownload(link) {
@@ -205,16 +205,16 @@ async function connectDownload(link) {
   if (!response.ok) return;
   link.href = link.dataset.download;
   link.setAttribute("aria-disabled", "false");
-  link.querySelector(".file-state").textContent = "下载";
+  link.querySelector(".file-state").textContent = "Download";
 }
 
 loadMetrics().catch(error => {
-  document.querySelector("#run-status").textContent = "指标读取失败";
+  document.querySelector("#run-status").textContent = "Could not load metrics";
   document.querySelector("#result-description").textContent = error.message;
 });
 document.querySelectorAll("[data-download]").forEach(link => {
   connectDownload(link).catch(() => {
-    link.querySelector(".file-state").textContent = "暂不可用";
+    link.querySelector(".file-state").textContent = "Unavailable";
   });
 });
 updateControls();
