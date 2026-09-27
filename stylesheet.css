@@ -138,6 +138,20 @@ h2 {
   font-size: 16px;
 }
 
+.research-intro {
+  margin: 8px 0;
+}
+
+@media (min-width: 768px) {
+  .research-questions {
+    min-width: max-content;
+  }
+
+  .research-questions li:first-child {
+    white-space: nowrap;
+  }
+}
+
 .hero-panel {
   margin-top: 18px;
   overflow: hidden;
