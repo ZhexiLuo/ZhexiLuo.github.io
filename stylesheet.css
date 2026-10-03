@@ -359,6 +359,38 @@ span.highlight {
     border-radius: 10px;
 }
 
+.email-copy-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  padding: 18px 28px;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(38, 52, 58, 0.12);
+  color: var(--text);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms ease, visibility 100ms;
+}
+
+.email-copy-toast.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-copy-toast {
+    transition: none;
+  }
+}
+
 /* Popover styles */
 .wechat-popover {
   display: none; /* Hidden by default */

@@ -8,7 +8,7 @@
     <meta name="author" content="Zhexi Luo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260927">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261003-centered-toast">
     
   </head>
 
@@ -42,7 +42,7 @@
                   🎓 <strong>I am actively seeking Fall 2027 PhD positions. For relevant opportunities or any thoughts related to my research, feel free to reach out!</strong>
                 </p>
                 <p style="text-align:center">
-                  <a href="mailto:zhexiluo2026@outlook.com">📧 Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:zhexiluo45@gmail.com" id="email-link" title="Copy email address">📧 Email</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=pu_qRyoAAAAJ&hl=en">🎓 Google Scholar</a> &nbsp;/&nbsp;
                   <a href="#" id="wechat-link">💬 WeChat</a>
                 </p>
@@ -339,7 +339,23 @@
       <img id="wechat-qr" src="images/wechat.jpg" alt="WeChat QR Code">
     </div>
 
+    <div id="email-copy-toast" class="email-copy-toast" role="status">✅ Copied</div>
+
     <script>
+      const emailLink = document.getElementById("email-link");
+      const emailCopyToast = document.getElementById("email-copy-toast");
+      let emailCopyTimeout;
+
+      emailLink.addEventListener("click", async function(event) {
+        event.preventDefault();
+        await navigator.clipboard.writeText(emailLink.getAttribute("href").slice(7));
+        emailCopyToast.classList.add("is-visible");
+        clearTimeout(emailCopyTimeout);
+        emailCopyTimeout = setTimeout(function() {
+          emailCopyToast.classList.remove("is-visible");
+        }, 1000);
+      });
+
       const profilePhotos = [
         { src: "images/profile-dog.webp", alt: "Illustration of Zhexi Luo sitting with a white dog" },
         { src: "zhexi2.jpg", alt: "Portrait of Zhexi Luo" },
