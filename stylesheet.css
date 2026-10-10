@@ -134,6 +134,14 @@ h2 {
   font-size: 32px;
 }
 
+.name-zh {
+  margin-left: 8px;
+  font-family: 'Songti TC', 'Noto Serif CJK TC', serif;
+  font-size: 16px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
 .intro-text {
   font-size: 16px;
 }
