@@ -105,7 +105,10 @@
                       <span class="paper-flip-hint" aria-hidden="true">↻ Flip</span>
                     </div>
                     <div class="paper-flip-face paper-flip-back">
-                      <img src="images/dexmimic-realworld.webp" alt="DexMimic real-world demonstrations of pouring, scooping, tilting, and shaking">
+                      <video id="dexmimic-demo-video" muted loop playsinline disablepictureinpicture preload="metadata" poster="images/dexmimic-hero-loop.jpg?v=20261014-bright" aria-label="DexMimic dexterous hand–object tracking demonstrations">
+                        <source src="images/dexmimic-hero-loop.mp4?v=20261014-bright" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                       <span class="paper-flip-hint" aria-hidden="true">↩ Flip back</span>
                     </div>
                   </div>
@@ -425,6 +428,7 @@
       showProfilePhoto(0);
 
       const dexMimicPaperFlip = document.getElementById("dexmimic-paper-flip");
+      const dexMimicDemoVideo = document.getElementById("dexmimic-demo-video");
       const omniDexGraspPaperFlip = document.getElementById("omnidexgrasp-paper-flip");
       const omniDexGraspDemoVideo = document.getElementById("omnidexgrasp-demo-video");
       const troGraspFlip = document.getElementById("tro-grasp-flip");
@@ -453,7 +457,7 @@
       }
 
       dexMimicPaperFlip.addEventListener("click", function() {
-        togglePaperFlip(dexMimicPaperFlip, "Flip DexMimic preview", "Flip back to DexMimic teaser");
+        togglePaperVideo(dexMimicPaperFlip, dexMimicDemoVideo, "Flip DexMimic preview", "Flip back to DexMimic teaser");
       });
 
       omniDexGraspPaperFlip.addEventListener("click", function() {
