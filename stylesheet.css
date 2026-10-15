@@ -89,6 +89,7 @@ a:hover {
 }
 
 body {
+  margin: 0;
   color: var(--text);
   background:
     radial-gradient(circle at 12% 4%, rgb(36 95 99 / 10%), transparent 28rem),
@@ -103,12 +104,13 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
+  line-height: 1.6;
 }
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 h2 {
@@ -118,12 +120,12 @@ h2 {
   color: var(--heading);
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 29px;
 }
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 700;
 }
 
@@ -131,19 +133,20 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .name-zh {
   margin-left: 8px;
   font-family: 'Songti TC', 'Noto Serif CJK TC', serif;
-  font-size: 16px;
+  font-size: 20px;
   vertical-align: middle;
   white-space: nowrap;
 }
 
 .intro-text {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.65;
 }
 
 .contact-links {
@@ -164,7 +167,7 @@ h2 {
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   backdrop-filter: blur(12px) saturate(120%);
   color: var(--text);
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.6;
   white-space: nowrap;
@@ -186,17 +189,34 @@ h2 {
   margin: 8px 0;
 }
 
-@media (min-width: 768px) {
-  .research-questions {
-    min-width: max-content;
-  }
+.page-layout {
+  width: calc(100% - 40px);
+  max-width: 1040px;
+  margin: 0 auto;
+  border: 0;
+  border-spacing: 0;
+  table-layout: fixed;
+}
 
-  .research-questions li:first-child {
-    white-space: nowrap;
-  }
+.hero-intro,
+.hero-profile {
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.hero-intro {
+  width: 63%;
+  vertical-align: middle;
+}
+
+.hero-profile {
+  width: 37%;
+  text-align: center;
+  vertical-align: top;
 }
 
 .hero-panel {
+  table-layout: fixed;
   margin-top: 18px;
   overflow: hidden;
   border: 1px solid rgb(255 255 255 / 76%);
@@ -209,7 +229,7 @@ h2 {
 
 .profile-carousel {
   width: 100%;
-  max-width: 315px;
+  max-width: 340px;
   margin: 0 auto;
 }
 
@@ -245,7 +265,7 @@ h2 {
   color: var(--link);
   background: var(--control-bg);
   font: inherit;
-  font-size: 13px;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -264,7 +284,42 @@ h2 {
 .profile-photo-counter {
   min-width: 32px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 17px;
+}
+
+.paper-list {
+  width: 100%;
+  border: 0;
+  border-spacing: 0 10px;
+  table-layout: fixed;
+}
+
+.paper-preview,
+.paper-details {
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.paper-preview {
+  width: 46%;
+  padding: 16px;
+}
+
+.paper-details {
+  width: 54%;
+  padding: 20px;
+}
+
+.paper-details,
+.paper-details p,
+.paper-details a,
+.paper-details strong {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.paper-details .papertitle {
+  font-size: 22px;
 }
 
 .paper-flip {
@@ -327,7 +382,7 @@ h2 {
   -webkit-backdrop-filter: blur(10px) saturate(110%);
   backdrop-filter: blur(10px) saturate(110%);
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
   text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
@@ -356,7 +411,33 @@ h2 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
+  .hero-panel > tbody > tr,
+  .paper-list > tbody > tr {
+    display: block;
+  }
+
+  .hero-intro,
+  .hero-profile,
+  .paper-preview,
+  .paper-details {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-intro,
+  .hero-profile {
+    padding: 20px;
+  }
+
+  .profile-carousel {
+    max-width: 280px;
+  }
+
+  .paper-details {
+    padding-top: 0;
+  }
+
   .profile-carousel-controls {
     flex-wrap: wrap;
   }
@@ -437,7 +518,7 @@ span.highlight {
 }
 
 .email-copy-label {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: -0.3px;
 }
@@ -446,7 +527,7 @@ span.highlight {
   display: block;
   margin-top: 6px;
   color: #788681;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .email-copy-toast.is-visible {

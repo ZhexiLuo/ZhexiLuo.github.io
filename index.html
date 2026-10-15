@@ -8,17 +8,17 @@
     <meta name="author" content="Zhexi Luo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261010-name-zh">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261015-type-20">
     
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table class="page-layout"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table class="hero-panel" style="width:100%;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <td class="hero-intro">
                 <p class="name" style="text-align: center;">
                   Zhexi Luo <span class="name-zh" lang="zh-Hant">羅喆熙</span>
                 </p>
@@ -48,7 +48,7 @@
                   <a href="#" id="wechat-link">💬 WeChat</a>
                 </p>
               </td>
-              <td style="padding:2.5%;width:37%;max-width:37%;text-align:center;vertical-align:top;">
+              <td class="hero-profile">
                 <div class="profile-carousel">
                   <div class="profile-photo-frame">
                     <img id="profile-photo" src="images/profile-dog.webp" alt="Illustration of Zhexi Luo sitting with a white dog">
@@ -91,13 +91,13 @@
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>📚 Research</h2>
-                <p style="margin:8px 0 0;font-size:13px;"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
+                <p style="margin:8px 0 0;font-size:17px;"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="paper-list"><tbody>
             <tr id="dexmimic" class="featured-paper">
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <button id="dexmimic-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip DexMimic preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
@@ -114,7 +114,7 @@
                   </div>
                 </button>
               </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <a href="https://zhexiluo.github.io/DexMimic/">
                   <span class="papertitle">DexMimic: A Generalist Dexterous Hand–Object Tracking Policy via Value-Guided Reset Allocation</span>
                 </a>
@@ -123,7 +123,7 @@
                 <br>
                 <strong><em>Under Review · Sep. 2026</em></strong>
                 <br>
-                <a aria-disabled="true" title="Link coming soon">arXiv</a> (under preparation) / <a href="https://zhexiluo.github.io/DexMimic/static/assets/paper.pdf">PDF</a> / <a href="https://zhexiluo.github.io/DexMimic/">project page</a>
+                <a href="https://arxiv.org/abs/2610.19089">arXiv</a> / <a href="https://arxiv.org/pdf/2610.19089">PDF</a> / <a href="https://zhexiluo.github.io/DexMimic/">project page</a>
                 <p></p>
                 <p>
                   One generalist policy for diverse dexterous skills from human demonstrations, with efficient learning and growing generalization as training scales.
@@ -131,7 +131,7 @@
               </td>
             </tr>
             <tr class="featured-paper">
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <button id="omnidexgrasp-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip OmniDexGrasp preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
@@ -148,12 +148,12 @@
                   </div>
                 </button>
       </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <a href="https://isee-laboratory.github.io/OmniDexGrasp/">
                   <span class="papertitle">OmniDexGrasp: Generalizable Dexterous Grasping via Foundation Model and Force Feedback</span>
         </a>
         <br>
-                <a href="" onclick="return false;">Yi-Lin Wei</a><sup>*</sup>, <strong>Zhexi Luo<sup>*</sup></strong>, <a href="https://yuhaolincode.github.io/">Yuhao Lin</a>, <a href="https://frenkielm.github.io/">Mu Lin</a>, Zhizhao Liang, <a href="https://github.com/Rain-Shuoyu">Shuoyu Chen</a>, <a href="" onclick="return false;">Wei-Shi Zheng</a><sup>†</sup>
+                Yi-Lin Wei<sup>*</sup>, <strong>Zhexi Luo<sup>*</sup></strong>, <a href="https://yuhaolincode.github.io/">Yuhao Lin</a>, <a href="https://frenkielm.github.io/">Mu Lin</a>, <a href="https://leungchaos.github.io/">Zhizhao Liang</a>, <a href="https://github.com/Rain-Shuoyu">Shuoyu Chen</a>, <a href="http://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a><sup>†</sup>
                 <br>
                 <strong><em>ICRA 2026</em></strong>
                 <br>
@@ -165,7 +165,7 @@
       </td>
     </tr>
             <tr>
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <button id="tro-grasp-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip T(R,O) Grasp++ preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
@@ -182,7 +182,7 @@
                   </div>
                 </button>
               </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <a href="https://trograspplusplus.github.io/">
                   <span class="papertitle">T(R,O) Grasp++: Cross-Embodiment Dexterous Grasping in Cluttered Environments at Scale</span>
                 </a>
@@ -199,7 +199,7 @@
               </td>
             </tr>
             <tr>
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <button id="humanoid-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip Humanoid Loco-Manipulation preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
@@ -216,12 +216,12 @@
                   </div>
                 </button>
               </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <a href="https://leungchaos.github.io/Humanoid-Whole-Body-Manipulation-via-Active-Spatial-Brain-and-Generalizable-Action-Cerebellum/#paper-home">
                   <span class="papertitle">Generalizable Humanoid Loco-Manipulation via Spatial Perception and Decision-Making of Multi-Agent Large Model</span>
                 </a>
                 <br>
-                Zhizhao Liang<sup>*</sup>, Yi-Lin Wei<sup>*</sup>, Xuhang Chen<sup>*</sup>, Mu Lin, Yi-Xiang He, <strong>Zhexi Luo</strong>, Jun-Hui Liu, Kun-Yu Lin, Wei-Shi Zheng<sup>†</sup>
+                <a href="https://leungchaos.github.io/">Zhizhao Liang</a><sup>*</sup>, Yi-Lin Wei<sup>*</sup>, Xuhang Chen<sup>*</sup>, <a href="https://frenkielm.github.io/">Mu Lin</a>, Yi-Xiang He, <strong>Zhexi Luo</strong>, Jun-Hui Liu, <a href="https://kunyulin.github.io/">Kun-Yu Lin</a>, <a href="http://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a><sup>†</sup>
                 <br>
                 <strong><em>ECCV 2026 (Oral)</em></strong>
                 <br>
@@ -233,7 +233,7 @@
       </td>
     </tr>
             <tr>
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <button id="axis-paper-flip" class="paper-flip paper-flip-trigger" type="button" aria-label="Flip AXIS preview">
                   <div class="paper-flip-inner">
                     <div class="paper-flip-face paper-flip-front">
@@ -247,7 +247,7 @@
                   </div>
                 </button>
               </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <a href="https://axisaiorg.github.io/AXIS-V1/">
                   <span class="papertitle">AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation</span>
                 </a>
@@ -264,10 +264,10 @@
               </td>
             </tr>
             <tr>
-              <td style="padding:16px;width:42.5%;vertical-align:middle">
+              <td class="paper-preview">
                 <img src="images/DriftTrace.jpg" alt="DriftTrace" style="width:100%">
       </td>
-              <td style="padding:20px;width:57.5%;vertical-align:middle">
+              <td class="paper-details">
                 <span class="papertitle">DriftTrace: Combating Concept Drift in Security Applications through Detection and Explanation</span>
                 <br>
                 Yuedong Pan, Lixin Zhao<sup>†</sup>, Tao Leng, <strong>Zhexi Luo</strong>, Lijun Cai, Aimin Yu, Dan Meng
