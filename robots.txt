@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhexiluo.github.io/DexMimic/sitemap.xml
