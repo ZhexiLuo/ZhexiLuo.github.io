@@ -8,7 +8,7 @@
     <meta name="author" content="Zhexi Luo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261015-type-20">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261017-scale-75">
     
   </head>
 
@@ -319,7 +319,7 @@
             </tr>
               <tr>
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/sysu.png" alt="SYSU" style="width:100%">
+                  <img src="images/sysu.png" alt="SYSU" width="1024" height="1024" style="width:100%;height:auto;object-fit:contain;">
               </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <p style="margin:0;"><strong>Sun Yat-sen University</strong></p>
@@ -491,12 +491,13 @@
         popover.style.display = "block"; // Show it first to get dimensions
         
         var rect = link.getBoundingClientRect();
+        var pageZoom = Number(getComputedStyle(document.documentElement).zoom);
         
         var popoverWidth = popover.offsetWidth;
         var popoverHeight = popover.offsetHeight;
 
-        popover.style.left = (rect.left + window.scrollX + (rect.width / 2) - (popoverWidth / 2)) + "px";
-        popover.style.top = (rect.top + window.scrollY - popoverHeight - 10) + "px"; // 10px above the link
+        popover.style.left = ((rect.left + window.scrollX + (rect.width / 2)) / pageZoom - (popoverWidth / 2)) + "px";
+        popover.style.top = ((rect.top + window.scrollY) / pageZoom - popoverHeight - 10) + "px"; // 10px above the link
       });
 
       link.addEventListener('mouseout', function() {
