@@ -436,6 +436,37 @@ h2 {
 }
 
 @media (max-width: 570px) {
+  :root {
+    zoom: 1;
+  }
+
+  body, td, th, tr, p, a, strong,
+  .intro-text, .paper-details, .paper-details p,
+  .paper-details a, .paper-details strong {
+    font-size: 16px;
+  }
+
+  .page-layout {
+    width: calc(100% - 24px);
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .paper-details .papertitle {
+    font-size: 20px;
+  }
+
+  .contact-links a {
+    font-size: 16px;
+  }
+
+  .profile-carousel-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
   .hero-panel > tbody > tr,
   .paper-list > tbody > tr {
     display: block;
